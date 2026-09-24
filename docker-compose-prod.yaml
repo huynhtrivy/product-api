@@ -33,5 +33,16 @@ services:
       retries: 5
       start_period: 10s
 
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower-cd
+    restart: always
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=30
+      - WATCHTOWER_CLEANUP=true
+    command: product-api-prod
+
 volumes:
   mongodb_prod_data:

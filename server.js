@@ -29,7 +29,7 @@ app.use("/api/products", productRoutes);
 // Route kiểm tra API
 app.get("/", (req, res) => {
   res.json({
-    message: "Product API is running",
+    message: "Product API is running - Version 2.0 Auto CD",
   });
 });
 
