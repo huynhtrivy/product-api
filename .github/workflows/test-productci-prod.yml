@@ -10,7 +10,6 @@ jobs:
   crud-test:
     runs-on: ubuntu-latest
 
-    # Khởi chạy service MongoDB trên máy ảo GitHub Actions
     services:
       mongodb:
         image: mongo:latest
@@ -38,5 +37,5 @@ jobs:
       - name: Run CRUD Integration Tests with MongoDB
         env:
           PORT: 3000
-          MONGO_URI: mongodb://localhost:27017/productdb_test
+          MONGO_URI: mongodb://127.0.0.1:27017/productdb_test
         run: npm test
