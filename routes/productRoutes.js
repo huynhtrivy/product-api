@@ -7,5 +7,4 @@ router.get("/", productController.getAllProducts);
 router.get("/:pid", productController.getProductByPid);
 router.put("/:pid", productController.updateProduct);
 router.delete("/:pid", productController.deleteProduct);
-
 module.exports = router;
