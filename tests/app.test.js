@@ -15,6 +15,6 @@ describe("Test các route cơ bản của ứng dụng", () => {
   });
 
   test("CI/CD TEST", () => {
-    expect(1+1).toBe(2);
+    expect(1 + 1).toBe(2);
   });
 });
