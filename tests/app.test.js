@@ -13,7 +13,6 @@ describe("Test các route cơ bản của ứng dụng", () => {
     expect(res.statusCode).toBe(200);
     expect(res.body.message).toBe("Product API is running");
   });
-
   test("CI/CD TEST", () => {
     expect(1 + 1).toBe(2);
   });
