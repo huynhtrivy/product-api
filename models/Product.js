@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema(
     pname: {
       type: String,
       required: true,
-      trim: false,
+      trim: true,
     },
     price: {
       type: Number,
@@ -19,10 +19,10 @@ const productSchema = new mongoose.Schema(
     },
     quantity: {
       type: Number,
-      required: false,
+      required: true,
     },
   },
-  { timestamps: false },
+  { timestamps: true },
 );
 
 module.exports = mongoose.model("Product", productSchema);
